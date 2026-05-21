@@ -7,8 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:"Nunito",sans-serif;background:#e8edf7;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:20px}
-  .site{background:#f0f4fb;border-radius:20px;overflow:visible;width:740px;color:#2a3a5c;box-shadow:0 8px 40px rgba(60,90,150,0.13)}
+  body{font-family:"Nunito",sans-serif;background:#e8edf7;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:10px}
+  .site{background:#f0f4fb;border-radius:20px;overflow:visible;width:100%;max-width:740px;color:#2a3a5c;box-shadow:0 8px 40px rgba(60,90,150,0.13)}
 
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;background:#f0f4fb}
   .topbar-icons{display:flex;gap:8px}
@@ -101,6 +101,52 @@
   .s-desc.ol{color:#4a5f90}
   .mini-rings{display:flex;gap:2px;margin-top:5px}
   .mr{width:9px;height:9px;border-radius:50%;border:1.5px solid}
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    body { padding: 0; background: #f0f4fb; }
+    .site { border-radius: 0; box-shadow: none; }
+
+    /* NAV */
+    .topbar { padding: 10px 14px; }
+    .top-nav { gap: 16px; font-size: 13px; }
+    .btn-login, .btn-signup { padding: 5px 12px; font-size: 12px; }
+
+    /* HERO */
+    .hero-wrap { margin: 0 10px 8px; padding-top: 40px; }
+    .hero { height: 180px; }
+    .hero-name { font-size: 26px; margin-bottom: 5px; }
+    .hero-desc { font-size: 11px; margin-bottom: 10px; }
+    .hero-text { padding: 14px 0 14px 16px; max-width: 200px; }
+    .hero-photo { width: 170px; right: 5px; top: 10px; }
+    .hero-arrow { display: none; }
+
+    /* OLYMPIA BANNER */
+    .olympia-banner { margin: 0 10px 10px; padding: 10px 14px; gap: 10px; }
+    .ol-title { font-size: 15px; }
+    .ol-sub { font-size: 11px; }
+    .ol-badge { padding: 4px 10px; font-size: 11px; }
+    .ol-flame { font-size: 22px; }
+
+    /* BOTTOM GRID → stack vertically */
+    .bottom-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 0 10px 16px;
+    }
+
+    /* ARTWORK */
+    .artwork-grid { grid-template-columns: 1fr 1fr; }
+
+    /* SIDEBAR → horizontal scroll row */
+    .sidebar-cards {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 4px;
+    }
+    .side-card { min-width: 200px; flex-shrink: 0; }
+  }
 </style>
 </head>
 <body>
